@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TNME Rules</title>
+    <link href="rulesStyle.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Radley:ital@0;1&family=Short+Stack&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Rules</h1>
+    <div id="1">
+        <h3>You are the doorman of the PT Apartment Complex, tasked with one simple task-- let the elements who live there inside.</h3>
+        <h2>BUT BE WARNED...</h2>
+        <h3>...for there are imposters attempting to disguise themselves.</h3>
+    </div>
+    <div id="2">
+        <h3>An element will come at the door, announcing its identity.</h3>
+        <h3>You will receive a paper with their validation info, such as:</h3>
+        <ul>
+            <li>PT family</li>
+            <li>Energy level</li>
+            <li>(Shorthand) electron configuration</li>
+        </ul>
+        <p>(Among others...)</p>
+    </div>
+    <div id="3">
+        <h2>The imposters will try this, too-- but they are somewhat clueless.</h2>
+        <h3>Search for mistakes within the validation info to weed out the doppelganger elements from the real ones.</h3>
+        <h3>Use the periodic table given to you on your right wall to verify the information on the element's ID.</h3>
+        <h3>If you think you've found a fake element, click the button! But be careful-- calling imposter on innocent elements may get you fired...!</h3>
+    </div>
+    <div id="4">
+        <h2>Good luck, and whatever you do...</h2>
+        <h1>...DON'T LET THE DOPPELGANGERS IN!!!</h1>
+        <button onclick="gameRdrct()">Play!</button>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <button id="prevBtn" class="prevBtn" onclick="prevDiv()">Previous</button>
+    <button id="nextBtn" class="nextBtn" onclick="nextDiv()">Next</button>
+
+    <script src="script.js"></script>
+
+    <script>
+        window.onload = function(){
+            ruleSetup();
+        }
+    </script>
+</body>
+</html>

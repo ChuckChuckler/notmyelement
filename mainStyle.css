@@ -1,0 +1,57 @@
+@keyframes buttonSwell{
+    from{height: 5vw; font-size: 3vw;}
+    to{height: 6vw; font-size: 4vw;}
+}
+
+@keyframes buttonShrink{
+    to{height: 5vw; font-size: 3vw;}
+    from{height: 6vw; font-size: 4vw;}
+}
+
+@keyframes fadeVisible{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+h1{
+    font-size: 10vw;
+    font-family: "Pixelify Sans", serif;
+}
+
+h3{
+    font-family: "Jersey 15", serif;
+    font-size: 3vw;
+}
+
+button{
+    width: 40vw;
+    height: 5vw;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    font-family: "Pixelify Sans", serif;
+    font-size: 3vw;
+}
+
+button:hover{
+    background-color: rgb(126, 126, 126);
+    color: white;
+    height: 6vw;
+    font-size: 4vw;
+    animation: buttonSwell;
+    animation-duration: 0.5s;
+}
+
+button:not(:hover){
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    height: 5vw;
+    font-size: 3vw;
+    animation: buttonShrink;
+    animation-duration: 0.5s;
+}
+
+.holder{
+    animation: fadeVisible;
+    animation-duration: 2s;
+}

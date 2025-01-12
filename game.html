@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME</title>
+    <link href="gameStyle.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Radley:ital@0;1&family=Short+Stack&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="gameHolder" id="gameHolder">
+        <img class="overlay" height="100%" width="100%" src="images/overlay.png">
+        <img id="sprite" class="sprite" src="images/sprite.png">
+        <div id="ptTable" class="ptTable">
+            <button class="exitScreenBtn" onclick="closePt()">X</button>
+        </div>
+        <div class="innerGameHolder" id="innerGameHolder">
+            <h2 id="currentscore">Current Score: 0</h2>
+            <h2 id="highscore">High Score: 0</h2>
+            <div class="sheet" id="sheet">
+                <button class="exitScreenBtn" onclick="exitSheet()">X</button>
+                <div class="flexDiv">
+                    <div class="innerDiv">
+                        <h1 class="elementName" id="elementName"></h1>
+                        <img id="idPhoto" class="idPhoto" height="200" width="200" src="https://banner2.cleanpng.com/20240322/chk/transparent-smiley-face-yellow-emoticon-wearing-sneakers-smiling-pointin65fde8108fa996.71728077.webp">
+                        <h4>Atomic Number:</h4>
+                        <h3 id="atomicNum"></h3>
+                        <h4>Family:</h4>
+                        <h3 id="family"></h3>
+                        <h4>Metal/Nonmetal:</h4>
+                        <h3 id="metal"></h3>
+                    </div>
+                    <div class="innerDiv">
+                        <h4>Valence Electrons:</h4>
+                        <h3 id="valElectrons"></h3>
+                        <h4>Ground State Energy Level:</h4>
+                        <h3 id="energyLevel"></h3>
+                        <h4>Charge:</h4>
+                        <h3 id="charge"></h3>
+                        <h4>Gains/Loses Electrons:</h4>
+                        <h3 id="gainsLoses"></h3>
+                        <h4>Shorthand Electron Configuration</h4>
+                        <h3 id="electronConfig"></h3>
+                    </div>
+                </div>
+            </div>
+            <button id="grant" class="grant" onclick="entry()"></button>
+            <button class="openSheet" id="openSheet" onclick="openSheet()">Open ID Sheet</button>
+            <button id="deny" class="deny" onclick="noEntry()"></button>
+            <button class="openPt" id="openPt" onclick="openPt()">
+                <img class="ptButtonDisp" src="images/ptButtonDisplay.png">
+            </button>
+        </div>
+    </div>
+
+    <div id="gameOver" class="gameOver">
+        <h1 class="uhoh">UH OH!</h1>
+        <h3 class="playerErr" id="playerErr"></h3>
+        <h4 class="playerErrInfo" id="playerErrInfo"></h4>
+        <br>
+        <button class="playAgain" onclick="gameGen()">Play Again</button>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script>
+        window.onload = function(){
+            gameGen();
+        }
+    </script>
+</body>
+</html>

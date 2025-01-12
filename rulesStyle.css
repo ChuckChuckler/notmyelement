@@ -1,0 +1,138 @@
+@keyframes titleSwell{
+    from{font-size: 5vw;}
+    to{font-size: 6vw;}
+}
+
+@keyframes titleShrink{
+    to{font-size: 5vw;}
+    from{font-size: 6vw;}
+}
+
+@keyframes divSwell{
+    from{width: 80%;
+        height: 70%;}
+    to{width: 83%;
+        height: 73%;}
+}
+@keyframes divShrink{
+    to{width: 80%;
+        height: 70%;}
+    from{width: 83%;
+        height: 73%;}
+}
+
+@keyframes buttonSwell{
+    from{width: 25vw;
+        height: 3vw;
+        font-size: 2.5vw;}
+    to{width: 26vw;
+        height: 4vw;
+        font-size: 3vw;}
+}
+
+@keyframes buttonShrink{
+    to{width: 25vw;
+        height: 3vw;
+        font-size: 2.5vw;}
+    from{width: 26vw;
+        height: 4vw;
+        font-size: 3vw;}
+}
+
+.prevBtn{
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+}
+
+.nextBtn{
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+}
+
+h1{
+    text-align: center;
+    font-size: 5vw;
+    font-family: "Jersey 15", serif;
+}
+
+h1:hover{
+    font-size: 6vw;
+    animation: titleSwell;
+    animation-duration: 0.5s;
+}
+
+h1:not(:hover){
+    font-size: 5vw;
+    animation: titleShrink;
+    animation-duration: 0.5s;
+}
+
+div{
+    width: 80%;
+    height: 70%;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: auto;
+    background-color: rgb(227, 227, 227);
+}
+
+div:hover{
+    width: 83%;
+    height: 73%;
+    animation: divSwell;
+    animation-duration: 0.5s;
+}
+
+div:not(:hover){
+    width: 80%;
+    height: 70%;
+    animation: divShrink;
+    animation-duration: 0.5s;
+}
+
+h3{
+    font-family: "Radley", serif;
+    font-size: 2vw;
+}
+
+h2{
+    font-family: "Radley", serif;
+    font-family: 2.5vw;
+}
+
+li{
+    font-family: "Short Stack", serif;
+    font-size: 2vw;
+}
+
+button{
+    width: 25vw;
+    height: 3vw;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    font-family: "Pixelify Sans", serif;
+    font-size: 2.5vw;
+}
+
+button:hover{
+    background-color: rgb(126, 126, 126);
+    color: white;
+    width: 26vw;
+    height: 4vw;
+    font-size: 3vw;
+    animation: buttonSwell;
+    animation-duration: 0.5s;
+}
+
+button:not(:hover){
+    width: 25vw;
+    height: 3vw;
+    background-color: white;
+    color: black;
+    font-size: 2.5vw;
+    animation: buttonShrink;
+    animation-duration: 0.5s;
+}

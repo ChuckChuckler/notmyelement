@@ -1,0 +1,325 @@
+@keyframes fromLeft {
+    from{left: -20%;
+        transform: translateX(20%);}
+    to{left: 50%;
+        transform: translateX(-50%);}
+}
+
+@keyframes toLeft {
+    to{left: -20%;
+        transform: translateX(20%);}
+    from{left: 50%;
+        transform: translateX(-50%);}
+}
+
+@keyframes toRight {
+    from{left: 50%;
+        transform: translateX(-50%);}
+    to{left: 120%;
+        transform: translateX(-120%);}
+}
+
+@keyframes ptSwell{
+    from{ width: 15vw;
+        height: 13vw;}
+    to{ width: 16vw;
+        height: 14vw;}
+}
+
+@keyframes ptShrink{
+    to{ width: 15vw;
+        height: 13vw;}
+    from{ width: 16vw;
+        height: 14vw;}
+}
+
+@keyframes functionButtonSwell{
+    from{width: 5vw; height: 5vw;}
+    to{width: 6vw; height: 6vw;}
+}
+
+@keyframes functionButtonShrink{
+    from{width: 6vw; height: 6vw;}
+    to{width: 5vw; height: 5vw;}
+}
+
+body{
+    overflow:hidden;
+    background-color: rgb(116, 95, 95);
+}
+
+.overlay{
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.idPhoto{
+    display: block;
+    margin: auto;
+    width: 20vw;
+    height: 20vw;
+}
+
+.elementName{
+    text-align: center;
+    font-family: "Radley", serif;
+}
+.sprite{
+    height: 65%;
+    position: absolute;
+    z-index: -2;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30%;
+    animation: fromLeft;
+    animation-duration: 2s;
+    animation-play-state: paused;
+}
+
+.sheet{
+    visibility: hidden;
+    overflow-y:scroll;
+    height: 80%;
+    width: 60%;
+    margin: auto;
+    background-color: rgb(227, 227, 227);
+    z-index: 3;
+}
+
+h2{
+    font-family: "Jersey 15", serif;
+    font-size: 2vw;
+    
+}
+
+.flexDiv{
+    display: flex;
+    justify-content: space-around;
+}
+
+.innerDiv{
+    width: 45%;
+}
+
+.grant{
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    width: 5vw;
+    height: 5vw;
+    background-image: url("images/checkmark.png");
+    background-size: 100%;
+    background-color: transparent;
+    border-radius: 100%;
+    border-style: solid;
+    border-color: rgb(225, 255, 226);
+    box-shadow:0px 0px 20px 10px rgb(193, 255, 193);
+}
+
+.grant:hover{
+    animation: functionButtonSwell;
+    animation-duration: 0.5s;
+    width: 6vw;
+    height: 6vw;
+}
+
+.grant:not(:hover){
+    animation: functionButtonShrink;
+    animation-duration: 0.5s;
+    width: 5vw;
+    height: 5vw;
+}
+
+.deny{
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+    width: 5vw;
+    height: 5vw;
+    background-image: url("images/xmark.png");
+    background-size: 100%;
+    border-radius: 100%;
+    border-style: solid;
+    border-color: rgb(255, 225, 225);
+    box-shadow:0px 0px 20px 10px rgb(255, 193, 193);
+}
+
+.deny:hover{
+    width: 5.5vw;
+    height: 5.5vw;
+}
+
+.deny:hover{
+    animation: functionButtonSwell;
+    animation-duration: 0.5s;
+    width: 6vw;
+    height: 6vw;
+}
+
+.deny:not(:hover){
+    animation: functionButtonShrink;
+    animation-duration: 0.5s;
+    width: 5vw;
+    height: 5vw;
+}
+
+.gameOver{
+    width: 100%;
+    height: 100%;
+}
+
+.innerGameHolder{
+    display: block;
+    z-index: 1;
+}
+
+.gameOver{
+    display: none;
+}
+
+.openSheet{
+    display: block;
+    margin: auto;
+    margin-top: -20px;
+    width: 20vw;
+    height: 3vw;
+    border-style: solid;
+    border-color: rgb(184, 184, 184);
+    border-radius: 25px;
+    font-family: "Jersey 15", serif;
+    font-size: 2vw;
+    color: rgb(87, 87, 87);
+}
+
+.openSheet:hover{
+    background-color: rgb(157, 157, 157);
+    color: white;
+}
+
+.openPt{
+    margin: 0;
+    position: absolute;
+    right: 6%;
+    top: 50%;
+    -ms-transform: translate(-6%, -50%);
+    transform: translate(6%, 50%);
+    height: 20px;
+    background-image: url("images/ptButtonDisplay.png");
+}
+
+h4{
+    font-family: "Radley", serif;
+    font-size: 2vw;
+}
+
+h3{
+    font-family: "Short Stack", serif;
+    font-size: 3vw;
+}
+
+.ptButtonDisp{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 15vw;
+    height: 13vw;
+}
+
+.ptButtonDisp:hover{
+    width: 16vw;
+    height: 14vw;
+    animation: ptSwell;
+    animation-duration: 0.5s;
+}
+
+.ptButtonDisp:not(:hover){
+    width: 15vw;
+    height: 13vw;
+    animation: ptShrink;
+    animation-duration: 0.5s;
+}
+
+.ptTable{
+    position: absolute;
+    background-image: url("images/pttable.png");
+    background-size: 100%;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 78vw;
+    height: 40vw;
+    visibility: hidden;
+}
+
+.exitScreenBtn{
+    position: absolute;
+    background-color: rgb(241, 55, 55);
+    color: white;
+    border-style: none;
+    width: 2vw;
+    height: 2vw;
+}
+
+.exitScreenBtn:hover{
+    background-color: rgb(201, 58, 58);
+    color: white;
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+@media only screen and (max-width: 716px){
+    .flexDiv{
+        display: block;
+        text-align: center;
+    }
+
+    .innerDiv{
+        display: block;
+        margin: auto;
+        width: 100%;
+    }
+}
+
+.gameOver{
+    text-align: center;
+}
+
+.uhoh{
+    font-size: 15vw;
+    color: white;
+    line-height: 0.5px;
+    margin-top: 200px;
+}
+
+.playerErr{
+    color: white;
+}
+
+.playerErrInfo{
+    color: white;
+    font-size: 2vw;
+}
+
+.playAgain{
+    width: 20vw;
+    height: 3vw;
+    border-style: solid;
+    border-color: rgb(184, 184, 184);
+    border-radius: 25px;
+    font-family: "Jersey 15", serif;
+    font-size: 2vw;
+    color: rgb(87, 87, 87);
+}
+
+.playAgain:hover{
+    background-color: rgb(157, 157, 157);
+    color: white;
+} 
