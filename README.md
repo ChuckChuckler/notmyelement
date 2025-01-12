@@ -10,7 +10,7 @@ Needless to say, the functionality of this project was more simple than expected
 
 The gameplay is outlined in the "rules" page displayed before the real game. Nonetheless, here is an overview:\
 A humanoid sillhouette representing an "element" will appear in the window before the player.\
-The player will be provided with its "I.D. page", which contains the following:\
+The player will be provided with its "I.D. page", which contains the following:
 * Atomic Number
 * Family
 * Metal/Nonmetal/Metalloid
